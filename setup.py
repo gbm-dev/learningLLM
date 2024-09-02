@@ -43,6 +43,7 @@ def create_env_file():
         return
 
     print_color("🔑 Please enter your OpenAI API key: ", Fore.CYAN, end='')
+    sys.stdout.flush()  # Ensure the prompt is displayed
     openai_api_key = getpass.getpass(prompt='')
     
     with open('.env', 'w') as f:
